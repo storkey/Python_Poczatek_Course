@@ -16,9 +16,15 @@ Skorzystaj ze wzoru: wartość = wartość pocz. * (1 + procent/100) ^ liczba la
 """
 import calculations.investment_calculator
 
-initial_capital = float(input("Podaj wartość kapitału początkowego: "))
-percentage = float(input("Podaj oprocentowanie lokaty: "))
-years = float(input("Podaj na ile lat jest lokata: "))
+
+def ask_for_float(message):
+    input_value = input(message)
+    return int(input_value)
+
+
+initial_capital = ask_for_float("Podaj wartość kapitału początkowego: ")
+percentage = ask_for_float("Podaj oprocentowanie lokaty: ")
+years = ask_for_float("Podaj na ile lat jest lokata: ")
 
 investment_value = calculations.investment_calculator.calculate_investment(initial_capital, percentage, years)
 
