@@ -14,4 +14,8 @@ a wczytanie danych i uruchomienie obliczeń w pliku powyżej pakietu.
 
 Skorzystaj ze wzoru: wartość = wartość pocz. * (1 + procent/100) ^ liczba lat
 """
+import calculations.investment_calculator
 
+initial_capital = float(input("Podaj wartość kapitału początkowego: "))
+percentage = float(input("Podaj oprocentowanie lokaty: "))
+years = float(input("Podaj na ile lat jest lokata: "))
