@@ -19,4 +19,3 @@ else:
         print(f"Niestety, {student_name} nie zdałeś/zdałaś....")
     else:
         print("Coś poszło nie tak... Zgłoś problem do obsługi systemu")
-        
