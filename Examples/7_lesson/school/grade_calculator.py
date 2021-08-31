@@ -7,3 +7,11 @@ def calculate_final_grade(all_grades):
     return final_grade
 
 
+def calculate_student_final_grades(student_name):
+    student = find_student_by_name(student_name)
+    final_grades = {}
+    for subject_result in student["subjects_results"]:
+        subject_name = subject_result["subject"]
+        final_grade = calculate_final_grade(subject_result["grades"])
+        final_grades[subject_name] = final_grade
+    return final_grades
