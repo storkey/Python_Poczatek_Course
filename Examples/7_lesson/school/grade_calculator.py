@@ -34,3 +34,9 @@ students = [
         ]
     }
 ]
+
+
+def find_student_by_name(name):
+    for student in students:
+        if student["name"] == name:
+            return student
