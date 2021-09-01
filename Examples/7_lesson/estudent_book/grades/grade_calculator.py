@@ -1,4 +1,4 @@
-from school.students_data import find_student_by_name
+from estudent_book.students_data import find_student_by_name
 
 
 def calculate_final_grade(all_grades):

@@ -1,4 +1,4 @@
-from school import promotion_status
+from estudent_book.grades import promotion_status
 
 FAILED_GRADE = 1
 

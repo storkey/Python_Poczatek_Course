@@ -1,7 +1,7 @@
-from school import promotion_status
-from school.grade_calculator import calculate_student_final_grades
-from school.promote import check_promotion
-from school.students_data import is_student_in_school
+from estudent_book.grades import promotion_status
+from estudent_book.grades.grade_calculator import calculate_student_final_grades
+from estudent_book.grades.promote import check_promotion
+from estudent_book.students_data import is_student_in_school
 
 print("Witaj w elektronicznym dzienniku!")
 
