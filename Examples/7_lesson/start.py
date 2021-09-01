@@ -1,26 +1,14 @@
-from estudent_book.grades import promotion_status
-from estudent_book.grades.grade_calculator import calculate_student_final_grades
-from estudent_book.grades.promote import check_promotion
-from estudent_book.students_data import is_student_in_school
-
-print("Witaj w elektronicznym dzienniku!")
-
-option = None
-while option != "X":
-    check_student_promotion()
+from estudent_book.grades.actions import check_student_promotion
 
 
-student_name = input("Podaj imię ucznia, żeby dowiedzieć się czy zdał do następnej klasy: ")
+def run_estudent_book():
+    print("Witaj w elektronicznym dzienniku!")
 
-if not is_student_in_school(student_name):
-    print(f"Niestety, {student_name} nie ma na liście...")
-else:
-    final_grades = calculate_student_final_grades(student_name)
-    promotion_result = check_promotion(final_grades)
+    option = None
+    while option != "X":
+        check_student_promotion()
+        option = input("Aby przerwać wprowadź 'X': ")
 
-    if promotion_result == promotion_status.PASSED:
-        print(f"Gratualcje! {student_name}, zdałaś/zdałeś do następnej klasy.")
-    elif promotion_result == promotion_status.FAILED:
-        print(f"Niestety, {student_name} nie zdałeś/zdałaś....")
-    else:
-        print("Coś poszło nie tak... Zgłoś problem do obsługi systemu")
+
+if __name__ == '__main__':
+    run_estudent_book()
