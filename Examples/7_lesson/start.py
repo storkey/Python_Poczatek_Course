@@ -5,6 +5,11 @@ from estudent_book.students_data import is_student_in_school
 
 print("Witaj w elektronicznym dzienniku!")
 
+option = None
+while option != "X":
+    check_student_promotion()
+
+
 student_name = input("Podaj imię ucznia, żeby dowiedzieć się czy zdał do następnej klasy: ")
 
 if not is_student_in_school(student_name):
