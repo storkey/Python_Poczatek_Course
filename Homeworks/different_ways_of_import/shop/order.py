@@ -3,7 +3,7 @@ from shop.products import products, update_product_quantity
 
 def create_order(ordered_product, ordered_quantity):
     price = products[ordered_product]["price"]
-    available_quantity = products[ordered_quantity]["quantity"]
+    available_quantity = products[ordered_product]["quantity"]
 
     if available_quantity < ordered_quantity:
         print("Nie mamy tyle towaru")

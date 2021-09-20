@@ -32,6 +32,6 @@ for product, quantity in products.items():
     counter += 1
 
 product_name = input("\nPodaj nazwę produktu, który chcesz kupić: ")
-product_quantity = input("Ile sztuk? ")
+product_quantity = int(input("Ile sztuk? "))
 
 create_order(product_name, product_quantity)
