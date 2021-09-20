@@ -29,3 +29,6 @@ counter = 1
 for product in products.keys():
     print(f"\t{counter}. {product}")
     counter += 1
+
+product_name = input("Podaj nazwę produktu, który chcesz kupić: ")
+product_quantity = input("Ile sztuk? ")
