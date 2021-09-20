@@ -21,3 +21,11 @@ Zadanie nr 3
 Zmodyfikuj rozwiązanie zadania pierwszego zamykając logikę w pliku main w funkcję, która wywoła się tylko
 jeżeli skrypt ten zostanie bezpośrednio uruchomiony __name__ → __main__.
 """
+from shop.products import products
+
+print("Witaj w naszym sklepie!")
+print("Oto nasze produkty:")
+counter = 1
+for product in products.keys():
+    print(f"\t{counter}. {product}")
+    counter += 1
