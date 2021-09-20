@@ -1,4 +1,4 @@
-from shop.products import products, update_product_quantity
+from .products import products, update_product_quantity
 
 
 def create_order(ordered_product, ordered_quantity):

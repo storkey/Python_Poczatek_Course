@@ -36,5 +36,6 @@ product_quantity = int(input("Ile sztuk? "))
 
 order = create_order(product_name, product_quantity)
 
-print(f"Dziękujemy za zakupy!")
-print(f"Kupiłeś: {order['product']}, sztuk: {order['quantity']}, cena łączna: {order['total_price']:.2f} PLN")
+if order is not None:
+    print(f"Dziękujemy za zakupy!")
+    print(f"Kupiłeś: {order['product']}, sztuk: {order['quantity']}, cena łączna: {order['total_price']:.2f} PLN")
