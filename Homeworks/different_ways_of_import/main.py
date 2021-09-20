@@ -24,18 +24,24 @@ jeżeli skrypt ten zostanie bezpośrednio uruchomiony __name__ → __main__.
 from shop.order import create_order
 from shop.products import products
 
-print("Witaj w naszym sklepie!")
-print("Oto nasze produkty:")
-counter = 1
-for product, quantity in products.items():
-    print(f"\t{counter}. {product} sztuk: {quantity['quantity']}")
-    counter += 1
 
-product_name = input("\nPodaj nazwę produktu, który chcesz kupić: ")
-product_quantity = int(input("Ile sztuk? "))
+def run_shop():
+    print("Witaj w naszym sklepie!")
+    print("Oto nasze produkty:")
+    counter = 1
+    for product, quantity in products.items():
+        print(f"\t{counter}. {product} sztuk: {quantity['quantity']}")
+        counter += 1
 
-order = create_order(product_name, product_quantity)
+    product_name = input("\nPodaj nazwę produktu, który chcesz kupić: ")
+    product_quantity = int(input("Ile sztuk? "))
 
-if order is not None:
-    print(f"Dziękujemy za zakupy!")
-    print(f"Kupiłeś: {order['product']}, sztuk: {order['quantity']}, cena łączna: {order['total_price']:.2f} PLN")
+    order = create_order(product_name, product_quantity)
+
+    if order is not None:
+        print(f"Dziękujemy za zakupy!")
+        print(f"Kupiłeś: {order['product']}, sztuk: {order['quantity']}, cena łączna: {order['total_price']:.2f} PLN")
+
+
+if __name__ == "__main__":
+    run_shop()
