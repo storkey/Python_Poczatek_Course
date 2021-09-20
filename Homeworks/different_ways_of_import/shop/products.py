@@ -4,7 +4,7 @@ products = {
         "price": 3.5
     },
     "jabłka": {
-        "quantity": 20,
+        "quantity": 30,
         "price": 2.5
     }
 }

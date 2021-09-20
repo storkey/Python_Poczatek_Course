@@ -21,14 +21,17 @@ Zadanie nr 3
 Zmodyfikuj rozwiązanie zadania pierwszego zamykając logikę w pliku main w funkcję, która wywoła się tylko
 jeżeli skrypt ten zostanie bezpośrednio uruchomiony __name__ → __main__.
 """
+from shop.order import create_order
 from shop.products import products
 
 print("Witaj w naszym sklepie!")
 print("Oto nasze produkty:")
 counter = 1
-for product in products.keys():
-    print(f"\t{counter}. {product}")
+for product, quantity in products.items():
+    print(f"\t{counter}. {product} sztuk: {quantity['quantity']}")
     counter += 1
 
-product_name = input("Podaj nazwę produktu, który chcesz kupić: ")
+product_name = input("\nPodaj nazwę produktu, który chcesz kupić: ")
 product_quantity = input("Ile sztuk? ")
+
+create_order(product_name, product_quantity)
