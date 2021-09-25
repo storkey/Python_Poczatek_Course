@@ -1,5 +1,8 @@
 class Student:
-    pass
+
+    # Konstrukt zostanie wywołany podczas tworzenia obiektu
+    def __init__(self):
+        print("Powstaje nowy obiekt!")
 
 
 class Grade:
