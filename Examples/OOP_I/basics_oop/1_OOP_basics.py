@@ -17,16 +17,21 @@ class School:
 
 def run_example():
     student_jan = Student()
-    my_grade = Grade()
-    primary_school = School()
 
-    print(student_jan)
-    print(my_grade)
-    print(primary_school)
-
-    print("Type of student_piotr object:", type(student_jan))
-    print("Type of my_grade object:", type(my_grade))
-    print("Type of primary_school object:", type(primary_school))
+    print(student_jan.first_name)
+    print(student_jan.last_name)
+    print(student_jan.age)
+    
+    # my_grade = Grade()
+    # primary_school = School()
+    #
+    # print(student_jan)
+    # print(my_grade)
+    # print(primary_school)
+    #
+    # print("Type of student_piotr object:", type(student_jan))
+    # print("Type of my_grade object:", type(my_grade))
+    # print("Type of primary_school object:", type(primary_school))
 
 
 if __name__ == "__main__":
