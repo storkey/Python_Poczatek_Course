@@ -3,7 +3,7 @@ import random
 
 class Student:
 
-    # Konstrukt zostanie wywołany podczas tworzenia obiektu
+    # Konstruktor zostanie wywołany podczas tworzenia obiektu
     def __init__(self, first_name, last_name):
         self.first_name = first_name
         self.last_name = last_name
@@ -18,8 +18,11 @@ class Grade:
 class School:
 
     # Konstruktor może zawierać również obiekty
+    # nie musi "wprost przypiwyać przekazanych wartości, może wykonywać swoją logikę
     def __init__(self, name, students):
         self.name = name
+        if len(students) > 10:
+            students = students[:10]
         self.students = students
 
 
@@ -37,7 +40,7 @@ def promote_student(student):
 def create_school_with_students(school_name):
     number_of_students = random.randint(1, 20)  # zakres od 1 do 20 włącznie
     students = []
-    for student_number in range(number_of_students): # licząc od zera
+    for student_number in range(number_of_students):  # licząc od zera
         first_name = f"Student--{student_number}"
         last_name = "Smith"
         students.append(Student(first_name, last_name))
