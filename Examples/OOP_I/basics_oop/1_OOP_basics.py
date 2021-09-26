@@ -33,10 +33,11 @@ def promote_student(student):
     student.promoted = True
 
 
+# Funkcja może tworzyć i zwracać nowe obiekty
 def create_school_with_students(school_name):
-    number_of_students = random.randint(1, 20)
+    number_of_students = random.randint(1, 20)  # zakres od 1 do 20 włącznie
     students = []
-    for student_number in range(number_of_students):
+    for student_number in range(number_of_students): # licząc od zera
         first_name = f"Student--{student_number}"
         last_name = "Smith"
         students.append(Student(first_name, last_name))
