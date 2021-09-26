@@ -1,3 +1,6 @@
+import random
+
+
 class Student:
 
     # Konstrukt zostanie wywołany podczas tworzenia obiektu
@@ -13,7 +16,11 @@ class Grade:
 
 
 class School:
-    pass
+
+    # Konstruktor może zawierać również obiekty
+    def __init__(self, name, students):
+        self.name = name
+        self.students = students
 
 
 # Obiekty możemy przekazywać jako argumenty do funkcji
