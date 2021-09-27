@@ -5,8 +5,30 @@
 
     Stwórz listę zawierającą 5 zamówień oraz słownik, w którym kluczami będą nazwy produktów,
     a wartościami instancje klasy produkt.
-"""
 
+    Konstruktor i pola obiektu (zadania)
+
+    Zadanie nr 1
+
+    Dodaj konstruktor przyjmujący odpowiednie argumenty do klas Product, Order, Apple i Potato:
+
+    Product: nazwa, nazwa kategorii, cena jednostkowa
+    Order: imię i nazwisko zamawiającego, lista produktów (domyślnie pusta), łączna cena
+    (obliczona w konstruktorze jako suma cen jednostkowych z listy produktów)
+    Apple: nazwa gatunku, rozmiar, cena za kg
+    Potato: nazwa gatunku, rozmiar, cena za kg
+
+    Utwórz kilka obiektów każdej klasy.
+
+
+    Zadanie nr 2
+
+    Napisz funkcję wypisującą produkt i zamówienie. Podczas wypisywania zamówienia skorzystaj z wypisywania produktu.
+
+    Zadanie nr 3
+
+    Napisz funkcję generującą zamówienie z losową listą produktów na przykład: Produkt-1, Produkt-2 itd.
+"""
 from OOP_basics.classes import Apple, Potato, Order, Product
 
 if __name__ == "__main__":
