@@ -19,9 +19,10 @@ class School:
 
     # Konstruktor może zawierać również obiekty
     # nie musi "wprost przypiwyać przekazanych wartości, może wykonywać swoją logikę
-    def __init__(self, name, students):
+    def __init__(self, name, students=None):
         self.name = name
-        if len(students) > 10:
+        # if len(students) > 10:
+        if students is None:
             students = students[:10]
         self.students = students
 
@@ -47,6 +48,11 @@ def create_school_with_students(school_name):
 
     school = School(school_name, students)
     return school
+
+
+# Ponowny side effect
+def assign_student_to_school(school, student):
+    school.students.append(student)
 
 
 def run_example():
