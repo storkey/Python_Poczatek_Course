@@ -22,8 +22,9 @@ class School:
     def __init__(self, name, students=None):
         self.name = name
         # if len(students) > 10:
+        # students = students[:10]
         if students is None:
-            students = students[:10]
+            students = []
         self.students = students
 
 
@@ -57,6 +58,11 @@ def assign_student_to_school(school, student):
 
 def run_example():
     school = create_school_with_students("Eton")
+    school_without_students = School("Empty school")
+    john_doe = Student("John", 'Doe')
+    assign_student_to_school(school_without_students, john_doe)
+    for student in school_without_students.students:
+        print_student(student)
     print(school)
     for student in school.students:
         print_student(student)
