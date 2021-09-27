@@ -26,6 +26,14 @@ class School:
         if students is None:
             students = []
         self.students = students
+        # z konstruktora możemy wywoływać inne funkcje
+        promote_lucky_students(students)
+
+
+def promote_lucky_students(students):
+    for index, student in enumerate(students):
+        if index % 3 == 0:
+            promote_student(student)
 
 
 # Obiekty możemy przekazywać jako argumenty do funkcji
