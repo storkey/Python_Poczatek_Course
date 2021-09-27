@@ -1,5 +1,14 @@
+import random
+
+
 class Student:
-    pass
+
+    # Konstruktor zostanie wywołany podczas tworzenia obiektu
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = 63
+        self.promoted = False
 
 
 class Grade:
@@ -7,18 +16,65 @@ class Grade:
 
 
 class School:
-    pass
+
+    # Konstruktor może zawierać również obiekty
+    # nie musi "wprost przypiwyać przekazanych wartości, może wykonywać swoją logikę
+    def __init__(self, name, students=None):
+        self.name = name
+        # if len(students) > 10:
+        # students = students[:10]
+        if students is None:
+            students = []
+        self.students = students
+        # z konstruktora możemy wywoływać inne funkcje
+        promote_lucky_students(students)
+
+
+def promote_lucky_students(students):
+    for index, student in enumerate(students):
+        if index % 3 == 0:
+            promote_student(student)
+
+
+# Obiekty możemy przekazywać jako argumenty do funkcji
+def print_student(student):
+    print(f"Student: {student.first_name} {student.last_name}, promoted: {student.promoted}")
+
+
+# W funkcji możemy zmodyfikować stan obiektu (side effect)
+def promote_student(student):
+    student.promoted = True
+
+
+# Funkcja może tworzyć i zwracać nowe obiekty
+def create_school_with_students(school_name):
+    number_of_students = random.randint(1, 20)  # zakres od 1 do 20 włącznie
+    students = []
+    for student_number in range(number_of_students):  # licząc od zera
+        first_name = f"Student--{student_number}"
+        last_name = "Smith"
+        students.append(Student(first_name, last_name))
+
+    school = School(school_name, students)
+    return school
+
+
+# Ponowny side effect
+def assign_student_to_school(school, student):
+    school.students.append(student)
+
+
+def run_example():
+    school = create_school_with_students("Eton")
+    school_without_students = School("Empty school")
+    john_doe = Student("John", 'Doe')
+    assign_student_to_school(school_without_students, john_doe)
+    for student in school_without_students.students:
+        print_student(student)
+    print(school)
+    for student in school.students:
+        print_student(student)
 
 
 if __name__ == "__main__":
-    student_piotr = Student()
-    my_grade = Grade()
-    primary_school = School()
-
-    print(student_piotr)
-    print(my_grade)
-    print(primary_school)
-
-    print("Type of student_piotr object:", type(student_piotr))
-    print("Type of my_grade object:", type(my_grade))
-    print("Type of primary_school object:", type(primary_school))
+    run_example()
