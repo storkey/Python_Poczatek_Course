@@ -29,27 +29,31 @@
 
     Napisz funkcję generującą zamówienie z losową listą produktów na przykład: Produkt-1, Produkt-2 itd.
 """
-from OOP_basics.classes import Apple, Potato, Order, Product
 import random
+
+from OOP_basics.classes import Apple, Potato, Order, Product
 
 
 def print_product(product):
-    print(f"Nazwa: {product.product_name}, Kategoria: {product.category_name},"
+    print(f"\tNazwa: {product.product_name}, Kategoria: {product.category_name},"
           f" Cena: {product.price_per_item:.2f} zł za sztukę.")
 
 
 def print_order(order):
+    print(f"Imię: {order.first_name}, Nazwisko: {order.last_name}\nZamówione produkty:")
     for product in order.products:
         print_product(product)
+    print(f"Cena łączna: {order.total_price:.2f} zł")
 
 
-def create_order_with_products(first_name, last_name, price_per_item):
+def create_order_with_products(first_name, last_name):
     ordered_products = []
     for number in range(random.randint(1, 20)):
         product_name = f"Produkt-{number}"
         categories = ["Pieczywo", "Warzywa", "Słodycze"]
         number_of_category = random.randint(0, 2)
         category = categories[number_of_category]
+        price_per_item = round(random.uniform(2, 5), 2)
         ordered_products.append(Product(product_name, category, price_per_item))
 
     return Order(first_name, last_name, ordered_products)
@@ -71,9 +75,12 @@ if __name__ == "__main__":
     products.append(third_product)
 
     first_order = Order(first_name="Jan", last_name="Kowalski", products=products)
+    second_order = create_order_with_products("Norman", "Normalny")
 
     print_product(second_product)
     print_order(first_order)
+    print("\n\n")
+    print_order(second_order)
 
     # print("Type of green_apple is:", type(green_apple))
     # print("Type of red_apple is:", type(red_apple))
