@@ -31,29 +31,25 @@
 """
 from OOP_basics.classes import Apple, Potato, Order, Product
 
-if __name__ == "__main__":
-    green_apple = Apple()
-    red_apple = Apple()
-    young_potato = Potato()
-    normal_potato = Potato()
 
+if __name__ == "__main__":
+
+    green_apple = Apple(genre_name="Ligol", size="L", price_per_kg=8.50)
+    red_apple = Apple(genre_name="Ligol", size="S", price_per_kg=7.00)
+    young_potato = Potato(genre_name="Bryza", size="M", price_per_kg=6.00)
+    normal_potato = Potato(genre_name="Bryza", size="L", price_per_kg=5.00)
+
+    products = []
+    first_product = Product(product_name="Ciastka", category_name="Słodycze", price_per_item=2.5)
+    products.append(first_product)
+    second_product = Product(product_name="Kalafior", category_name="Warzywa", price_per_item=4)
+    products.append(second_product)
+    third_product = Product(product_name="Chleb", category_name="Pieczywo", price_per_item=3.5)
+    products.append(third_product)
+
+    first_Order = Order(first_name="Jan", last_name="Kowalski", products=products)
+    
     print("Type of green_apple is:", type(green_apple))
     print("Type of red_apple is:", type(red_apple))
     print("Type of young_potato is:", type(young_potato))
     print("Type of normal_potato is:", type(normal_potato))
-
-    orders = []
-    for order in range(5):
-        orders.append(Order())
-    print(orders)
-
-    products = {
-        "Bryza": Product(),
-        "Ligol": Product(),
-        "Szynka": Product(),
-        "Ser": Product(),
-        "Majonez": Product()
-    }
-
-    for key, value in products.items():
-        print(f"\t{key}: {value}")
