@@ -32,6 +32,11 @@
 from OOP_basics.classes import Apple, Potato, Order, Product
 
 
+def print_product(product):
+    print(f"Nazwa: {product.product_name}, Kategoria: {product.category_name},"
+          f" Cena: {product.price_per_item} zł za sztukę.")
+
+
 if __name__ == "__main__":
 
     green_apple = Apple(genre_name="Ligol", size="L", price_per_kg=8.50)
@@ -48,7 +53,7 @@ if __name__ == "__main__":
     products.append(third_product)
 
     first_Order = Order(first_name="Jan", last_name="Kowalski", products=products)
-    
+
     print("Type of green_apple is:", type(green_apple))
     print("Type of red_apple is:", type(red_apple))
     print("Type of young_potato is:", type(young_potato))
