@@ -1,3 +1,8 @@
+import random
+
+from OOP_I.estudent.student import Student
+
+
 class School:
 
     # Konstruktor może zawierać również obiekty
@@ -16,3 +21,16 @@ class School:
         for index, student in enumerate(self.students):
             if index % 3 == 0:
                 student.promote()
+
+
+# Funkcja może tworzyć i zwracać nowe obiekty
+def create_school_with_students(school_name):
+    number_of_students = random.randint(1, 20)  # zakres od 1 do 20 włącznie
+    students = []
+    for student_number in range(number_of_students):  # licząc od zera
+        first_name = f"Student--{student_number}"
+        last_name = "Smith"
+        students.append(Student(first_name, last_name))
+
+    school = School(school_name, students)
+    return school
