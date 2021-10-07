@@ -28,36 +28,20 @@
     Zadanie nr 3
 
     Napisz funkcję generującą zamówienie z losową listą produktów na przykład: Produkt-1, Produkt-2 itd.
+
+    Zadanie nr 4
+
+    Podziel projekt- utwórz nowy pakiet (shop) i przenieś do osobnych modułów (plików) w pakiecie store:
+    a. Klasę Apple
+    b. Klasę Potato
+    c. Klasę Product oraz funkcje generujące i wypisujące produkt
+    d. Klasę Order oraz funkcje genereujące i wypisujące zamówienie
+    e. Utwórz skrypt uruchmieniowy main, ktyr importuje i wykorzystuje powyższe klasy i funkcje
 """
-import random
-
-from OOP_basics.classes import Apple, Potato, Order, Product
-
-
-def print_product(product):
-    print(f"\tNazwa: {product.product_name}, Kategoria: {product.category_name},"
-          f" Cena: {product.price_per_item:.2f} zł za sztukę.")
-
-
-def print_order(order):
-    print(f"Imię: {order.first_name}, Nazwisko: {order.last_name}\nZamówione produkty:")
-    for product in order.products:
-        print_product(product)
-    print(f"Cena łączna: {order.total_price:.2f} zł")
-
-
-def create_order_with_products(first_name, last_name):
-    ordered_products = []
-    for number in range(random.randint(1, 20)):
-        product_name = f"Produkt-{number}"
-        categories = ["Pieczywo", "Warzywa", "Słodycze"]
-        number_of_category = random.randint(0, 2)
-        category = categories[number_of_category]
-        price_per_item = round(random.uniform(2, 5), 2)
-        ordered_products.append(Product(product_name, category, price_per_item))
-
-    return Order(first_name, last_name, ordered_products)
-
+from shop.store.apple import Apple
+from shop.store.order import Order, create_order_with_products, print_order
+from shop.store.potato import Potato
+from shop.store.product import Product, print_product
 
 if __name__ == "__main__":
 
