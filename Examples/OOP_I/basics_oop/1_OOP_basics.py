@@ -68,10 +68,10 @@ def run_example():
     john_doe = Student("John", 'Doe')
     assign_student_to_school(school_without_students, john_doe)
     for student in school_without_students.students:
-        print_student(student)
+        student.print_student()
     print(school)
     for student in school.students:
-        print_student(student)
+        student.print_student()
 
 
 if __name__ == "__main__":
