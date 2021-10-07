@@ -3,19 +3,7 @@ import random
 from OOP_I.estudent.student import Student
 
 
-class School:
 
-    # Konstruktor może zawierać również obiekty
-    # nie musi "wprost przypiwyać przekazanych wartości, może wykonywać swoją logikę
-    def __init__(self, name, students=None):
-        self.name = name
-        # if len(students) > 10:
-        # students = students[:10]
-        if students is None:
-            students = []
-        self.students = students
-        # z konstruktora możemy wywoływać inne funkcje
-        promote_lucky_students(students)
 
 
 def promote_lucky_students(students):
