@@ -10,6 +10,9 @@ class Student:
         self.age = 63
         self.promoted = False
 
+    def print_student(self):
+        print(f"Student: {self.first_name} {self.last_name}, promoted: {self.promoted}")
+
 
 class Grade:
     pass
@@ -34,11 +37,6 @@ def promote_lucky_students(students):
     for index, student in enumerate(students):
         if index % 3 == 0:
             promote_student(student)
-
-
-# Obiekty możemy przekazywać jako argumenty do funkcji
-def print_student(student):
-    print(f"Student: {student.first_name} {student.last_name}, promoted: {student.promoted}")
 
 
 # W funkcji możemy zmodyfikować stan obiektu (side effect)
