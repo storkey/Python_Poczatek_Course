@@ -1,5 +1,7 @@
 import random
 
+from OOP_I.estudent.student import Student
+
 
 class School:
 
@@ -19,12 +21,7 @@ class School:
 def promote_lucky_students(students):
     for index, student in enumerate(students):
         if index % 3 == 0:
-            promote_student(student)
-
-
-# W funkcji możemy zmodyfikować stan obiektu (side effect)
-def promote_student(student):
-    student.promoted = True
+            student.promote()
 
 
 # Funkcja może tworzyć i zwracać nowe obiekty

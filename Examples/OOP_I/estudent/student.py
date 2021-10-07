@@ -7,5 +7,8 @@ class Student:
         self.age = 63
         self.promoted = False
 
-    def print_student(self):
+    def print_self(self):
         print(f"Student: {self.first_name} {self.last_name}, promoted: {self.promoted}")
+
+    def promote(self):
+        self.promoted = True
