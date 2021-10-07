@@ -22,6 +22,11 @@ class School:
             if index % 3 == 0:
                 student.promote()
 
+    def print_self(self):
+        print(f"School: {self.name}, with {len(self.students)} students:")
+        for student in self.students:
+            student.print_self()
+
 
 # Funkcja może tworzyć i zwracać nowe obiekty
 def create_school_with_students(school_name):
