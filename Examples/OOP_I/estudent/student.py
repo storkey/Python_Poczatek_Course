@@ -8,7 +8,8 @@ class Student:
         self.final_grades = []
 
     def print_self(self):
-        print(f"Student: {self.first_name} {self.last_name}, promoted: {self.promoted}")
+        print(f"Student: {self.first_name} {self.last_name}, promoted: {self.promoted}, "
+              f"Final grades: {self.final_grades}")
 
     def promote(self):
         self.promoted = True
