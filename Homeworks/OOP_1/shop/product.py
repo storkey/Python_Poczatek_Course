@@ -5,7 +5,6 @@ class Product:
         self.category_name = category_name
         self.price_per_item = price_per_item
 
-
-def print_product(product):
-    print(f"\tNazwa: {product.product_name}, Kategoria: {product.category_name},"
-          f" Cena: {product.price_per_item:.2f} zł za sztukę.")
+    def print_product(self):
+        print(f"\tNazwa: {self.product_name}, Kategoria: {self.category_name},"
+              f" Cena: {self.price_per_item:.2f} zł za sztukę.")

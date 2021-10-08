@@ -1,7 +1,7 @@
 from shop.apple import Apple
 from shop.order import Order, create_order_with_products, print_order
 from shop.potato import Potato
-from shop.product import Product, print_product
+from shop.product import Product
 
 if __name__ == "__main__":
 
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     first_order = Order(first_name="Jan", last_name="Kowalski", products=products)
     second_order = create_order_with_products("Norman", "Normalny")
 
-    print_product(second_product)
+    second_product.print_product()
     print_order(first_order)
     print("\n\n")
     print_order(second_order)
