@@ -18,12 +18,11 @@ class Order:
             total_price += product.price_per_item
         self.total_price = total_price
 
-
-def print_order(order):
-    print(f"Imię: {order.first_name}, Nazwisko: {order.last_name}\nZamówione produkty:")
-    for product in order.products:
-        print_product(product)
-    print(f"Cena łączna: {order.total_price:.2f} zł")
+    def print_order(self):
+        print(f"Imię: {self.first_name}, Nazwisko: {self.last_name}\nZamówione produkty:")
+        for product in self.products:
+            print_product(product)
+        print(f"Cena łączna: {self.total_price:.2f} zł")
 
 
 def create_order_with_products(first_name, last_name):

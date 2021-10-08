@@ -1,5 +1,5 @@
 from shop.apple import Apple
-from shop.order import Order, create_order_with_products, print_order
+from shop.order import Order, create_order_with_products
 from shop.potato import Potato
 from shop.product import Product
 
@@ -22,6 +22,6 @@ if __name__ == "__main__":
     second_order = create_order_with_products("Norman", "Normalny")
 
     second_product.print_product()
-    print_order(first_order)
+    first_order.print_order()
     print("\n\n")
-    print_order(second_order)
+    second_order.print_order()
