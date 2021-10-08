@@ -1,6 +1,6 @@
 import random
 
-from shop.store.product import print_product, Product
+from shop.product import print_product, Product
 
 
 class Order:
