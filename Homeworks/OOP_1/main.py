@@ -5,10 +5,10 @@ from shop.product import Product
 
 if __name__ == "__main__":
 
-    green_apple = Apple(genre_name="Ligol", size="L", price_per_kg=8.50)
-    red_apple = Apple(genre_name="Ligol", size="S", price_per_kg=7.00)
-    young_potato = Potato(genre_name="Bryza", size="M", price_per_kg=6.00)
-    normal_potato = Potato(genre_name="Bryza", size="L", price_per_kg=5.00)
+    green_apple = Apple(genre_name="Ligol", size="L", kg=2)
+    red_apple = Apple(genre_name="Ligol", size="S", kg=7)
+    young_potato = Potato(genre_name="Bryza", size="M", kg=12)
+    normal_potato = Potato(genre_name="Bryza", size="L", kg=3)
 
     products = []
     first_product = Product(product_name="Ciastka", category_name="Słodycze", price_per_item=2.5)
