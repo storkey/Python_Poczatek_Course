@@ -1,6 +1,6 @@
 import random
 
-from shop.product import print_product, Product
+from shop.product import Product
 
 
 class Order:
@@ -21,7 +21,7 @@ class Order:
     def print_order(self):
         print(f"Imię: {self.first_name}, Nazwisko: {self.last_name}\nZamówione produkty:")
         for product in self.products:
-            print_product(product)
+            product.print_product()
         print(f"Cena łączna: {self.total_price:.2f} zł")
 
 
