@@ -12,4 +12,4 @@ class OrderElement:
 
     def print_order_element(self):
         self.product.print_product()
-        print(f"\tLiczba sztuk {self.quantity}, cena sumarycznie: {self.calculate_total_price()} zł")
+        print(f"\tLiczba sztuk {self.quantity}, cena sumarycznie: {self.calculate_total_price():.2f} zł")

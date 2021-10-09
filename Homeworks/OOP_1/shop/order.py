@@ -12,7 +12,7 @@ class Order:
 
         if ordered_elements is None:
             ordered_elements = []
-        self.products = ordered_elements
+        self.ordered_elements = ordered_elements
 
         total_price = 0
         for order_element in ordered_elements:
@@ -20,9 +20,14 @@ class Order:
         self.total_price = total_price
 
     def print_order(self):
-        print(f"Imię: {self.first_name}, Nazwisko: {self.last_name}\nZamówione produkty:")
-        for product in self.products:
-            product.print_product()
+        print(30 * "*")
+        print(f"Imię: {self.first_name}, Nazwisko: {self.last_name}")
+        print(30 * "*")
+        print("Zamówione produkty:")
+
+        for ordered_element in self.ordered_elements:
+            ordered_element.print_order_element()
+            print(5 * "-")
         print(f"Cena łączna: {self.total_price:.2f} zł")
 
 
