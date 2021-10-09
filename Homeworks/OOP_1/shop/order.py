@@ -1,17 +1,18 @@
 import random
 
+from shop.order_element import OrderElement
 from shop.product import Product
 
 
 class Order:
 
-    def __init__(self, first_name, last_name, products=None):
+    def __init__(self, first_name, last_name, ordered_elements=None):
         self.first_name = first_name
         self.last_name = last_name
 
-        if products is None:
-            products = []
-        self.products = products
+        if ordered_elements is None:
+            ordered_elements = []
+        self.products = ordered_elements
 
         total_price = 0
         for product in products:

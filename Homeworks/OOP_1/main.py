@@ -18,7 +18,7 @@ if __name__ == "__main__":
     third_product = Product(product_name="Chleb", category_name="Pieczywo", price_per_item=3.5)
     products.append(third_product)
 
-    first_order = Order(first_name="Jan", last_name="Kowalski", products=products)
+    first_order = Order(first_name="Jan", last_name="Kowalski", ordered_elements=products)
     second_order = create_order_with_products("Norman", "Normalny")
 
     second_product.print_product()
