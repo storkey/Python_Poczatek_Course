@@ -15,8 +15,8 @@ class Order:
         self.products = ordered_elements
 
         total_price = 0
-        for product in products:
-            total_price += product.price_per_item
+        for order_element in ordered_elements:
+            total_price += order_element.calculate_total_price()
         self.total_price = total_price
 
     def print_order(self):
@@ -27,13 +27,14 @@ class Order:
 
 
 def create_order_with_products(first_name, last_name):
-    ordered_products = []
+    ordered_elements = []
     for number in range(random.randint(1, 20)):
         product_name = f"Produkt-{number}"
         categories = ["Pieczywo", "Warzywa", "Słodycze"]
         number_of_category = random.randint(0, 2)
         category = categories[number_of_category]
         price_per_item = round(random.uniform(2, 5), 2)
-        ordered_products.append(Product(product_name, category, price_per_item))
+        quantity = random.randint(1, 10)
+        ordered_elements.append(OrderElement(Product(product_name, category, price_per_item), quantity))
 
-    return Order(first_name, last_name, ordered_products)
+    return Order(first_name, last_name, ordered_elements)
