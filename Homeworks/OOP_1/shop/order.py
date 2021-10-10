@@ -14,10 +14,13 @@ class Order:
             ordered_elements = []
         self.ordered_elements = ordered_elements
 
+        self.total_price = self.calculate_total_price()
+
+    def calculate_total_price(self):
         total_price = 0
-        for order_element in ordered_elements:
+        for order_element in self.ordered_elements:
             total_price += order_element.calculate_total_price()
-        self.total_price = total_price
+        return total_price
 
     def print_order(self):
         print(30 * "*")
