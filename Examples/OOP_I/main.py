@@ -19,6 +19,10 @@ def run_example():
         student.add_final_grade(final_grade)
     print(school)
 
+    repr_first_student = repr(school.students[0])
+    print("\n")
+    print(repr_first_student)
+
 
 if __name__ == "__main__":
     run_example()
