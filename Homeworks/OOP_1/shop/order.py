@@ -19,7 +19,7 @@ class Order:
     def calculate_total_price(self):
         total_price = 0
         for order_element in self.ordered_elements:
-            total_price += order_element.calculate_total_price()
+            total_price += order_element.calculate_element_total_price()
         return total_price
 
     def print_order(self):
