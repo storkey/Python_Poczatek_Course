@@ -17,6 +17,13 @@ class School:
         # z konstruktora możemy wywoływać inne funkcje
         self.promote_lucky_students()
 
+    def __repr__(self):
+        students_reprs = []
+        for student in self.students:
+            students_reprs.append(repr(student))
+        all_students_repr = ", ".join(students_reprs)
+        return f"<School: name: {self.name}, students:[{all_students_repr}]>"
+
     def __str__(self):
         students = ""
         for student in self.students:

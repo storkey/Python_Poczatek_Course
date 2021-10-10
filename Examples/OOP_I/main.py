@@ -23,6 +23,8 @@ def run_example():
     print("\n")
     print(repr_first_student)
 
+    print(repr(school))
+
 
 if __name__ == "__main__":
     run_example()
