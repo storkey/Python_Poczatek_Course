@@ -5,6 +5,10 @@ from OOP_I.estudent.school import create_school_with_students
 
 def run_example():
     school = create_school_with_students("Hogwart")
+    print(30 * "*")
+    for student in school.students:
+        print(student)
+    print(30 * "*")
 
     for student in school.students:
         student.promote()

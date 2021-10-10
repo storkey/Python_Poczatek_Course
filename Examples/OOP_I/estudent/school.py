@@ -25,7 +25,7 @@ class School:
     def print_self(self):
         print(f"School: {self.name}, with {len(self.students)} students:")
         for student in self.students:
-            student.print_self()
+            print(student)
 
 
 # Funkcja może tworzyć i zwracać nowe obiekty

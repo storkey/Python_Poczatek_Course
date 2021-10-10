@@ -7,9 +7,10 @@ class Student:
         self.promoted = False
         self.final_grades = []
 
-    def print_self(self):
-        print(f"Student: {self.first_name} {self.last_name}, promoted: {self.promoted}, "
-              f"Final grades: {self.final_grades}")
+    # Nie print! Musi zwracać stringa
+    def __str__(self):
+        return f"Student: {self.first_name} {self.last_name}, promoted: {self.promoted} " \
+               f"Final grades: {self.final_grades}"
 
     def promote(self):
         self.promoted = True
