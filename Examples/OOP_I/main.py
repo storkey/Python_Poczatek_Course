@@ -12,13 +12,12 @@ def run_example():
 
     for student in school.students:
         student.promote()
-    school.print_self()
     print("=" * 20)
 
     for student in school.students:
         final_grade = random.randint(1, 3)
         student.add_final_grade(final_grade)
-    school.print_self()
+    print(school)
 
 
 if __name__ == "__main__":

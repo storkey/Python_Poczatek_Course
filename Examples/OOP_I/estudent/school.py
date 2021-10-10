@@ -17,15 +17,18 @@ class School:
         # z konstruktora możemy wywoływać inne funkcje
         self.promote_lucky_students()
 
+    def __str__(self):
+        students = ""
+        for student in self.students:
+            students += "\n"
+            students += str(student)
+
+        return f"School: {self.name}, with {len(self.students)} students: {students}"
+
     def promote_lucky_students(self):
         for index, student in enumerate(self.students):
             if index % 3 == 0:
                 student.promote()
-
-    def print_self(self):
-        print(f"School: {self.name}, with {len(self.students)} students:")
-        for student in self.students:
-            print(student)
 
 
 # Funkcja może tworzyć i zwracać nowe obiekty
