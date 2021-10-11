@@ -37,6 +37,9 @@ class School:
     def __int__(self):
         return len(self.students)
 
+    def __len__(self):
+        return len(self.students)
+
     def promote_lucky_students(self):
         for index, student in enumerate(self.students):
             if index % 3 == 0:

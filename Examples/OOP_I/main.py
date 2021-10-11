@@ -26,6 +26,8 @@ def run_example():
     print(repr(school))
     school_as_number = int(school)
     print(school_as_number)
+    school_len = len(school)
+    print(school_len)
 
 
 if __name__ == "__main__":
