@@ -32,6 +32,9 @@ class School:
 
         return f"School: {self.name}, with {len(self.students)} students: {students}"
 
+    def __int__(self):
+        return len(self.students)
+
     def promote_lucky_students(self):
         for index, student in enumerate(self.students):
             if index % 3 == 0:
