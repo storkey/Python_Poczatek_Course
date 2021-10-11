@@ -1,6 +1,7 @@
 import random
 
 from OOP_I.estudent.school import create_school_with_students
+from OOP_I.estudent.student import Student
 
 
 def run_example():
@@ -28,6 +29,15 @@ def run_example():
     print(school_as_number)
     school_len = len(school)
     print(school_len)
+
+    # związane z __bool__ w klasie Student
+    some_student = Student(first_name="Grzegorz", last_name="Zima")
+    print(bool(some_student))
+    some_student.promoted = True
+    print(bool(some_student))
+    # zastosowanie np. w if
+    if some_student:
+        print(f"Zadziałała funkcja bool, która dała wartość: {bool(some_student)}")
 
 
 if __name__ == "__main__":

@@ -17,6 +17,9 @@ class Student:
         return f"Student: {self.first_name} {self.last_name}, promoted: {self.promoted} " \
                f"Final grades: {self.final_grades}"
 
+    def __bool__(self):
+        return self.promoted
+
     def promote(self):
         self.promoted = True
 
