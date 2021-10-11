@@ -12,6 +12,7 @@ class Student:
                f"final_grades = {self.final_grades}>"
 
     # Nie print! Musi zwracać stringa
+    # Służy do obsługi funkcji wbudowanej str
     def __str__(self):
         return f"Student: {self.first_name} {self.last_name}, promoted: {self.promoted} " \
                f"Final grades: {self.final_grades}"

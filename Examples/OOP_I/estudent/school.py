@@ -24,6 +24,7 @@ class School:
         all_students_repr = ", ".join(students_reprs)
         return f"<School: name: {self.name}, students:[{all_students_repr}]>"
 
+    # Służy do obsługi funkcji wbudowanej str
     def __str__(self):
         students = ""
         for student in self.students:
@@ -32,6 +33,7 @@ class School:
 
         return f"School: {self.name}, with {len(self.students)} students: {students}"
 
+    # Służy do obsługi funkcji wbudowanej int
     def __int__(self):
         return len(self.students)
 
