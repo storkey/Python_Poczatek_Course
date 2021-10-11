@@ -24,6 +24,8 @@ def run_example():
     print(repr_first_student)
 
     print(repr(school))
+    school_as_number = int(school)
+    print(school_as_number)
 
 
 if __name__ == "__main__":
