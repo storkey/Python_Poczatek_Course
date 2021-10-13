@@ -52,6 +52,10 @@ def run_example():
     extra_money = Money(dollars=5, cents=80)
     all_money = some_money + extra_money
     print(all_money)
+    print(30 * "*")
+    print(f"{Money(dollars=1, cents=20)} == {Money(dollars=100, cents=5)}?")
+    print(Money(dollars=1, cents=20) == Money(dollars=100, cents=5))
+    print(30 * "*")
 
 
 if __name__ == '__main__':
