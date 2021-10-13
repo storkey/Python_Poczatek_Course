@@ -13,15 +13,25 @@ class Money:
         cents = all_cents % 100
         return Money(dollars=dollars, cents=cents)
 
-    def __eq__(self, other):
+    def __eq__(self, other):  # equal
         if self.__class__ != other.__class__:
             return NotImplemented
         return self.as_cents() == other.as_cents()
 
-    def __ne__(self, other):
+    def __ne__(self, other):  # not equal
         if self.__class__ != other.__class__:
             return NotImplemented
         return self.as_cents() != other.as_cents()
+
+    def __lt__(self, other):  # less than
+        if self.__class__ != other.__class__:
+            return NotImplemented
+        return self.as_cents() < other.as_cents()
+
+    def __le__(self, other):  # less equal
+        if self.__class__ != other.__class__:
+            return NotImplemented
+        return self.as_cents() <= other.as_cents()
 
     def __str__(self):
         return f"{self.dollars}$ and {self.cents} cents"
