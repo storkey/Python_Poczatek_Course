@@ -14,7 +14,7 @@ class Money:
         return Money(dollars=dollars, cents=cents)
 
     def __eq__(self, other):  # equal
-        if self.__class__ != other.__class__:
+        if self.__class__ != other.__class__:  # porównujemy czy obiekty są tej samej klasy
             return NotImplemented
         return self.as_cents() == other.as_cents()
 
