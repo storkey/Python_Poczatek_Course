@@ -18,6 +18,11 @@ class Money:
             return NotImplemented
         return self.as_cents() == other.as_cents()
 
+    def __ne__(self, other):
+        if self.__class__ != other.__class__:
+            return NotImplemented
+        return self.as_cents() != other.as_cents()
+
     def __str__(self):
         return f"{self.dollars}$ and {self.cents} cents"
 
