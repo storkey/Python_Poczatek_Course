@@ -48,10 +48,12 @@ class Money:
 
 
 def run_example():
-    some_money = Money(dollars=100, cents=55)
-    extra_money = Money(dollars=5, cents=80)
-    all_money = some_money + extra_money
-    print(all_money)
+    some_money = [
+        Money(dollars=1, cents=20),
+        Money(dollars=10, cents=20),
+        Money(dollars=100, cents=20),
+        Money(dollars=1000, cents=20),
+    ]
     print(30 * "*")
     print(f"{Money(dollars=1, cents=20)} == {Money(dollars=100, cents=5)}?")
     print(Money(dollars=1, cents=20) == Money(dollars=100, cents=5))
